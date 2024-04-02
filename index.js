@@ -30,7 +30,7 @@ _io.on('connection', (socket) => {
 
 
 
-httpServer.listen(3000, async () => {
+httpServer.listen(8000, async () => {
     await connectDb()
-    console.log(`App is listening on port 3000`);
+    console.log(`App is listening on port 8000`);
 })
