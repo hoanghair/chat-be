@@ -16,13 +16,13 @@ const verifyPassword = async (pw, pwHash) => {
 };
 
 const KEY_FILE_PATH = './secret.key';
-let secretKey;
-if (fs.existsSync(KEY_FILE_PATH)) {
-    secretKey = fs.readFileSync(KEY_FILE_PATH);
-} else {
-    secretKey = crypto.randomBytes(32);
-    fs.writeFileSync(KEY_FILE_PATH, secretKey);
-}
+const secretKey = fs.readFileSync(KEY_FILE_PATH);
+// if (fs.existsSync(KEY_FILE_PATH)) {
+//     secretKey = fs.readFileSync(KEY_FILE_PATH);
+// } else {
+//     secretKey = crypto.randomBytes(32);
+//     fs.writeFileSync(KEY_FILE_PATH, secretKey);
+// }
 
 const iv = crypto.randomBytes(16);
 
